@@ -13,6 +13,7 @@ const Routing = () => {
       </BrowserRouter>
     </div>
   );
+
 };
 
 export default Routing;
