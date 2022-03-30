@@ -3,6 +3,7 @@ import "./App.css";
 import AddGun from "./components/AddGun/AddGun";
 import EditGun from "./components/EditGun/EditGun";
 import Header from "./components/Header/Header";
+import ContextProvider from "./contexts/Context";
 
 import Routing from "./Routing";
 
@@ -10,7 +11,9 @@ function App() {
   return (
     <div>
       CS GO - Steam
-      <Routing />
+      <ContextProvider>
+        <Routing />
+      </ContextProvider>
     </div>
   );
 }

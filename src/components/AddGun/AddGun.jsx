@@ -20,9 +20,11 @@ const AddGun = () => {
     };
     if ((!name, !price, !image)) {
       return alert("Fill in ");
+    } else {
+      postGun(newGun);
+      navigate("/list");
     }
-    navigate("/list");
-    postGun(newGun);
+
     setImage("");
     setPrice("");
     setName("");
