@@ -20,14 +20,17 @@ const reducer = (state = INIT_STATE, action) => {
       return state;
   }
 };
-
+async function postGun(newObj) {
+  await axios.post(API, newObj);
+  getGun();
+}
 const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  const getGunData = async () => {
+  const getGun = async () => {
     let { data } = await axios(API);
     dispatch({
-      type: "GET_GUN_DATA",
+      type: "GET_GUN",
       payload: data,
     });
   };
@@ -49,6 +52,7 @@ const ContextProvider = ({ children }) => {
       value={{
         gun: state.gun,
         gunEdit: state.gunEdit,
+        postGun,
         getGunData,
         deleteGun,
         editGuns,

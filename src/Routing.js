@@ -11,9 +11,9 @@ const Routing = () => {
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path="/list" element={<SteamList />} />
+          {/* <Route path="/list" element={<SteamList />} /> */}
           <Route path="/add" element={<AddGun />} />
-          <Route path="/edit" element={<EditGun />} />
+          {/* <Route path="/edit" element={<EditGun />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
