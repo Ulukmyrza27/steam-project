@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 
 const Routing = () => {
@@ -7,6 +7,9 @@ const Routing = () => {
     <div>
       <BrowserRouter>
         <Header />
+        <Routes>
+          <Route />
+        </Routes>
       </BrowserRouter>
     </div>
   );
