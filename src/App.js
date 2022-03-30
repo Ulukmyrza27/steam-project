@@ -1,11 +1,10 @@
 import "./App.css";
-import Header from "./components/Header/Header";
+import Routing from "./Routing";
 
 function App() {
   return (
     <div>
-      CS GO - Steam
-      <Header />
+      <Routing />
     </div>
   );
 }
