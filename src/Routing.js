@@ -6,19 +6,23 @@ import HomePage from "./components/HomaPage/HomePage";
 import Login from "./components/Login/Login";
 import NavBar from "./components/NavBar/NavBar";
 import Skins from "./components/Skins/Skins";
+import SteamList from "./components/SteamList/SteamList";
 
 const Routing = () => {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/skins" element={<Skins />} />
-        <Route path="/add" element={<AddGun />} />
-      </Routes>
-      <Header />
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/store" element={<SteamList />} />
+          <Route exect path="/" element={<HomePage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/skins" element={<Skins />} />
+          <Route path="/add" element={<AddGun />} />
+        </Routes>
+        <Header />
+      </BrowserRouter>
+    </div>
   );
 };
 

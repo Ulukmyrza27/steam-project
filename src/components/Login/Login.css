@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
 }
-.login input {
+.login-inp {
   width: 20%;
   height: 8%;
   margin: 10px;
@@ -34,6 +34,6 @@
 .btn-login:hover {
   background-color: rgb(140, 54, 12);
 }
-input:hover {
+.input-inp:hover {
   background-color: rgb(13, 13, 82);
 }

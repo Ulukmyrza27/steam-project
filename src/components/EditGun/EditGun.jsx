@@ -1,51 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const EditGun = () => {
-  return <div>"Edit Gun"</div>;
+  const [edit, setEdit] = useState(null);
+  useEffect(() => {
+    getGuns(params.id);
+  }, []);
+  function handleValue(e) {
+    let edited = {
+      ...edit,
+      [e.target.name]: e.target.value,
+    };
+    setEdit(edited);
+  }
+
+  return (
+    <div className="edit-gun">
+      <input
+        className="input"
+        type="text"
+        name="product"
+        value={edit.product}
+        placeholder="Title"
+        onChange={handleValue}
+      />
+      <input
+        className="input"
+        type="text"
+        name="price"
+        value={edit.price}
+        placeholder="Price"
+        onChange={handleValue}
+      />
+      <input
+        className="input"
+        type="text"
+        name="image"
+        value={edit.image}
+        placeholder="Image"
+        onChange={handleValue}
+      />
+    </div>
+  );
 };
 
 export default EditGun;
-
-// import React, { useState } from "react";
-// import { useEffect }"Edit Gun" from "react";
-// import { useContext } from "react";
-// import { useNavigate } from "react-router-dom";
-// import { contexts } from "../../contexts/Context";
-
-// const EditGuns = () => {
-//   const { gunEdit, saveGun } = useContext(contexts);
-//   const [newEditGun, setNewEditGun] = useState(gunEdit);
-//   const navigate = useNavigate();
-//   useEffect(() => setNewEditGun(gunEdit), [gunEdit]);
-
-//   function handleEditInput(e) {
-//     let newGun = {
-//       ...newEditGun,
-//       task: e.target.value,
-//     };
-//     setNewEditGun(newGun);
-//   }
-
-//   function save() {
-//     saveGun(newEditGun);
-//     navigate("/");
-//   }
-//   return (
-//     <div>
-//       {newEditGun ? (
-//         <>
-//           <input
-//             onChange={handleEditInput}
-//             value={newEditGun.task}
-//             type="text"
-//           />
-//           <button onClick={save}>Save</button>
-//         </>
-//       ) : (
-//         <h1>Loading...</h1>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default EditGuns;

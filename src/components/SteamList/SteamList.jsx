@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import { contexts } from "../../contexts/Context";
 
 const SteamList = () => {
-  const { gun, getGunData, editGun } = useContext(contexts);
+  const { gun, getGunData, editGun, deleteGun } = useContext(contexts);
   useEffect(() => {
     getGunData();
   }, []);
@@ -34,7 +34,9 @@ const SteamList = () => {
             <Button onClick={() => editGun(item.id)} size="small">
               Edit
             </Button>
-            <Button size="small">Delete</Button>
+            <Button onClick={() => deleteGun(item.id)} size="small">
+              Delete
+            </Button>
           </CardActions>
         </Card>
       ))}

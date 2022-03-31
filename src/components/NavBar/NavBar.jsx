@@ -7,14 +7,15 @@ const NavBar = () => {
     <div>
       <div className="navbar-abs">
         <Link to="/">
-          {" "}
           <img
             className="navbar-logoa"
             src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
             alt=""
           />
         </Link>
-        <h2>STORE</h2>
+        <Link to="/store" style={{ textDecoration: "none" }}>
+          <h2>STORE</h2>
+        </Link>
         <h2>SKINS</h2>
         <h2>ABOUT</h2>
         <Link to="/login">

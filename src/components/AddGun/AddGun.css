@@ -1,0 +1,47 @@
+.card-gun-a {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(https://cdn.cloudflare.steamstatic.com/store/home/store_home_share.jpg);
+  position: fixed;
+  background-size: cover;
+}
+.add-gun {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+  align-items: center;
+  padding: 10px;
+}
+.add-inp {
+  margin: 10px;
+  width: 500px;
+  height: 50px;
+  border: none;
+  background-color: rgb(83, 172, 172);
+  border-radius: 5px;
+  padding-left: 40px;
+}
+
+.add_btn {
+  background-color: rgb(113, 103, 206);
+  width: 540px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(243, 240, 237);
+  margin-top: 10px;
+}
+.add-inp:hover {
+  color: white;
+  background-color: rgb(27, 112, 112);
+}
+
+.add_btn:hover {
+  background-color: rgb(112, 35, 157);
+}
