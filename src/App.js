@@ -1,11 +1,15 @@
 import "./App.css";
-import Header from "./components/Header/Header";
+import ContextProvider from "./contexts/Context";
+
+import Routing from "./Routing";
 
 function App() {
   return (
     <div>
       CS GO - Steam
-      <Header />
+      <ContextProvider>
+        <Routing />
+      </ContextProvider>
     </div>
   );
 }
