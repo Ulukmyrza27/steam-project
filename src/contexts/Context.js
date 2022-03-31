@@ -1,73 +1,51 @@
 import React, { useReducer } from "react";
 import axios from "axios";
-import { CASE_GET_ONE_PRODUCT, CASE_GET_PRODUCTS } from "../helpers/cases";
-import { API } from "../helpers/consts";
+// import { CASE_EDIT_GUNS, CASE_GET_GUN_DATA } from "../helpers/cases";
+// import { API } from "../helpers/consts";
 
-export const productsContext = React.createContext();
-
+export const contexts = React.createContext();
+const API = "http://localhost:8001/guns";
 const INIT_STATE = {
-  products: [],
-  oneProduct: null,
-  productsCount: 0,
+  gun: [],
 };
+
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
-    case CASE_GET_PRODUCTS:
-      return {
-        ...state,
-        products: action.payload.data,
-        productsCount: action.payload.headers["x-total-count"],
-      };
-    case CASE_GET_ONE_PRODUCT:
-      return { ...state, oneProduct: action.payload.data };
+    case "GET_GUN_DATA":
+      return { ...state, gun: action.payload };
+
     default:
       return state;
   }
 };
-const ProductsContextProvider = ({ children }) => {
+
+const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
-  async function getProducts() {
-    let result = await axios(API + window.location.search);
-    console.log(result);
+
+  const getGunData = async () => {
+    let { data } = await axios.get(API);
     dispatch({
-      type: CASE_GET_PRODUCTS,
-      payload: result,
+      type: "GET_GUN_DATA",
+      payload: data,
     });
-  }
-  async function deleteProduct(id) {
-    await axios.delete(`${API}/${id}`);
-    getProducts();
-  }
-  async function getOneProduct(id) {
-    let result = await axios(`${API}/${id}`);
-    dispatch({
-      type: CASE_GET_ONE_PRODUCT,
-      payload: result,
-    });
-  }
-  async function createProduct(newProduct) {
-    await axios.post(API, newProduct);
-    getProducts();
-  }
-  async function updateProduct(id, editedProduct) {
-    await axios.patch(`${API}/${id}`, editedProduct);
-    getProducts();
+  };
+
+  async function postGun(newObj) {
+    await axios.post(API, newObj);
+    getGunData();
   }
   return (
-    <productsContext.Provider
+    <contexts.Provider
       value={{
-        products: state.products,
-        oneProduct: state.oneProduct,
-        productsCount: state.productsCount,
-        getProducts,
-        deleteProduct,
-        getOneProduct,
-        createProduct,
-        updateProduct,
+        gun: state.gun,
+        gunEdit: state.gunEdit,
+        postGun,
+        getGunData,
       }}
     >
       {children}
-    </productsContext.Provider>
+    </contexts.Provider>
   );
 };
-export default ProductsContextProvider;
+
+export default ContextProvider;

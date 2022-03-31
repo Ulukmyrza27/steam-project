@@ -1,10 +1,14 @@
 import "./App.css";
+import ContextProvider from "./contexts/Context";
+
 import Routing from "./Routing";
 
 function App() {
   return (
     <div>
-      <Routing />
+      <ContextProvider>
+        <Routing />
+      </ContextProvider>
     </div>
   );
 }
