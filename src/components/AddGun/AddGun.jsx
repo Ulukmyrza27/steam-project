@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-
+import "./AddGun.css";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
@@ -22,7 +22,7 @@ const AddGun = () => {
       return alert("Fill in ");
     } else {
       postGun(newGun);
-      navigate("/list");
+      navigate("/store");
     }
 
     setImage("");
@@ -31,41 +31,34 @@ const AddGun = () => {
   }
 
   return (
-    <div className="">
-      <img className="photo" src="" alt="image" />
+    <div className="card-gun-a">
       <div className="add-main">
-        <div
-          className="add-gun"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "250px",
-            height: "150px",
-          }}
-        >
+        <div className="add-gun">
           <input
-            style={{ marginTop: "10px" }}
+            className="add-inp"
             onChange={(e) => setName(e.target.value)}
             value={name}
             type="text"
             placeholder="Title"
           />
           <input
+            className="add-inp"
             onChange={(e) => setPrice(e.target.value)}
             value={price}
             type="text"
             placeholder="Price"
           />
           <input
+            className="add-inp"
             onChange={(e) => setImage(e.target.value)}
             value={image}
             type="text"
             placeholder="Image"
           />
           <Stack direction="row" spacing={2}>
-            <Button onClick={() => addGun()} color="warning">
+            <button className="add_btn" onClick={() => addGun()}>
               Add Gun
-            </Button>
+            </button>
           </Stack>
         </div>
       </div>
