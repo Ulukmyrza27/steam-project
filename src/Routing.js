@@ -1,26 +1,23 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AddGun from "./components/AddGun/AddGun";
+import EditGun from "./components/EditGun/EditGun";
 import Header from "./components/Header/Header";
-import ImageStart from "./components/ImageStart/ImageStart";
-import NavBar from "./components/NavBar/NavBar";
-import Skins from "./components/Skins/Skins";
+import SteamList from "./components/SteamList/SteamList";
 
 const Routing = () => {
   return (
     <div>
-      <NavBar />
+      <Header />
       <BrowserRouter>
-        <ImageStart />
         <Routes>
-          <Route path="/skins" element={<Skins />} />
+          <Route path="/list" element={<SteamList />} />
           <Route path="/add" element={<AddGun />} />
+          {/* <Route path="/edit" element={<EditGun />} /> */}
         </Routes>
-        <Header />
       </BrowserRouter>
     </div>
   );
-
 };
 
 export default Routing;
