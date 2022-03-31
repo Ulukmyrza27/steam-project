@@ -4,7 +4,7 @@ import axios from "axios";
 // import { API } from "../helpers/consts";
 
 export const contexts = React.createContext();
-const API = "http://localhost:8001/guns";
+const API = "http://localhost:8002/guns";
 const INIT_STATE = {
   gun: [],
 };
@@ -34,6 +34,10 @@ const ContextProvider = ({ children }) => {
     await axios.post(API, newObj);
     getGunData();
   }
+  async function deleteGun(id) {
+    await axios.delete(`${API}/${id}`);
+    getGunData();
+  }
   return (
     <contexts.Provider
       value={{
@@ -41,6 +45,7 @@ const ContextProvider = ({ children }) => {
         gunEdit: state.gunEdit,
         postGun,
         getGunData,
+        deleteGun,
       }}
     >
       {children}
