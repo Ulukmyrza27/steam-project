@@ -6,28 +6,33 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { contexts } from "../../contexts/Context";
-
+import "./SteamList.css";
 const SteamList = () => {
   const { gun, getGunData, editGun, deleteGun } = useContext(contexts);
   useEffect(() => {
     getGunData();
   }, []);
   return (
-    <div className="block">
+    <div className="block-u">
       {gun.map((item) => (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card
+          className="card-gun-u"
+          // sx={{ maxWidth: 345, marginLeft: 70, backgroundColor: "#2f3e4f" }}
+        >
           <CardMedia
+            className="card-media-gun-u"
             component="img"
             alt="green iguana"
-            height="140"
+            height="200"
+            // width="200"
             image={item.image}
           />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+          <CardContent className="card-content-u">
+            <Typography gutterBottom variant="h6" component="div">
               {item.name}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {item.price}
+              {"$" + item.price}
             </Typography>
           </CardContent>
           <CardActions>
