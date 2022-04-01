@@ -4,7 +4,7 @@ import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <div>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <div className="navbar-abs">
         <Link to="/">
           <img
@@ -14,10 +14,12 @@ const NavBar = () => {
           />
         </Link>
         <Link to="/store" style={{ textDecoration: "none" }}>
-          <h2>STORE</h2>
+          <h4>STORE</h4>
         </Link>
-        <h2>SKINS</h2>
-        <h2>ABOUT</h2>
+        <h4>SKINS</h4>
+        <Link to="/about" style={{ textDecoration: "none" }}>
+          <h4> ABOUT</h4>
+        </Link>
         <Link to="/login">
           <img
             className="navbar-avatara"

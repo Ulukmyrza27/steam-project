@@ -1,3 +1,22 @@
 {
-  "guns": []
+  "guns": [
+    {
+      "name": "Kalashnikov case",
+      "image": "https://market.games.mail.ru/s3/media/product/picture/2021/9/b088fa566f1349b84a9cebcdec350ef7.png",
+      "price": 39,
+      "id": 1
+    },
+    {
+      "name": "Kel-Tec KS 7",
+      "image": "https://market.games.mail.ru/s3/media/product/picture/2022/1/ec76d25606c86d1ed985871a20736409.png",
+      "price": 39,
+      "id": 2
+    },
+    {
+      "name": "Truvelo CMS",
+      "image": "https://market.games.mail.ru/s3/media/product/picture/2022/1/dbc7dd07d485d56a30a40c0eee949a56.png",
+      "price": 39,
+      "id": 3
+    }
+  ]
 }

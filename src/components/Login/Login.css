@@ -1,8 +1,6 @@
 .login-bg-image {
-  background-image: url(https://csgo-bets.org/wp-content/uploads/2020/04/csgobig2.jpg);
   width: 100%;
   height: 100vh;
-  position: fixed;
 }
 .login {
   width: 100%;
