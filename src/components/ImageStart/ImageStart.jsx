@@ -165,6 +165,27 @@ const ImageStart = () => {
             src="https://cdn.cloudflare.steamstatic.com/steam/apps/256784014/microtrailer.webm?t=1590429401"
           ></video>
         </div>
+        <div
+          className="image-start-end"
+          style={{
+            width: "100%",
+            height: "200px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          {" "}
+          <h1 style={{ color: "white" }}>Game Start</h1>{" "}
+          <h3 style={{ width: "80%", color: "white" }}>
+            Steam — онлайн-сервис цифрового распространения компьютерных игр и
+            программ, разработанный и поддерживаемый компанией Valve. Steam
+            выполняет роль средства технической защиты авторских прав, платформы
+            для многопользовательских игр и потокового вещания, а также
+            социальной сети для игроков.
+          </h3>
+        </div>
       </div>
     </div>
   );

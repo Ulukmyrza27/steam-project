@@ -20,6 +20,9 @@ const NavBar = () => {
         <Link to="/about" style={{ textDecoration: "none" }}>
           <h4> ABOUT</h4>
         </Link>
+        <Link to="/add" style={{ textDecoration: "none" }}>
+          <h4>ADMIN</h4>
+        </Link>
         <Link to="/login">
           <img
             className="navbar-avatara"

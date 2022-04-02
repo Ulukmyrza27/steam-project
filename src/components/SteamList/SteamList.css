@@ -1,0 +1,41 @@
+.block-u {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.card-gun-u {
+  color: aliceblue;
+  margin-top: 20px;
+  height: 350px;
+  margin-right: 10px;
+  width: 250px;
+  box-shadow: 0 5px 5px 0 rgb(14, 192, 46);
+  background-color: rgba(142, 142, 142, 0.479);
+}
+.card-media-gun-u {
+  background-color: rgb(73, 68, 68);
+}
+
+.search {
+  width: 350px;
+  height: 50px;
+  padding-left: 20px;
+  border: none;
+  background-color: rgb(146, 153, 158);
+}
+.block-card-a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-gun-u:hover {
+  /* margin: 0 px; */
+  margin-top: 10px;
+  background-color: rgba(114, 111, 111, 0.91);
+}

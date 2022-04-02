@@ -15,8 +15,44 @@
     {
       "name": "Truvelo CMS",
       "image": "https://market.games.mail.ru/s3/media/product/picture/2022/1/dbc7dd07d485d56a30a40c0eee949a56.png",
-      "price": 39,
+      "price": "99",
       "id": 3
+    },
+    {
+      "name": "Babochka",
+      "price": "399",
+      "image": "https://market.games.mail.ru/s3/media/product/picture/2022/3/306de7976a27bd81b740dcceaa0a13e2.png",
+      "id": 5
+    },
+    {
+      "name": "Phobos",
+      "image": "https://market.games.mail.ru/s3/media/product/picture/2021/11/8fd8f74c85817101853e62c10d635656.png",
+      "price": 39,
+      "id": 6
+    },
+    {
+      "name": "Poltergeist",
+      "image": "https://market.games.mail.ru/s3/media/product/picture/2021/10/2c692b75e1a5c46797eb141e2e946e57.png",
+      "price": 39,
+      "id": 7
+    },
+    {
+      "name": "Frankenschtein",
+      "image": "https://market.games.mail.ru/s3/media/product/picture/2021/10/b2236dba13577147a44b7a9937140ded.png",
+      "price": 39,
+      "id": 8
+    },
+    {
+      "name": "HX Outdoors Trident 'WII'",
+      "image": "https://market.games.mail.ru/s3/media/product/picture/2022/3/d5398cf5468f726441d601e6bc5a4c22.png",
+      "price": 499,
+      "id": 9
+    },
+    {
+      "name": "Warface",
+      "price": "399",
+      "image": "https://market.games.mail.ru/s3/media/product/picture/2021/12/e86c881a8168cf02e6422847be4431a4.png",
+      "id": 10
     }
   ]
 }

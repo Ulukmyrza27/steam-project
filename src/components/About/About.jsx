@@ -20,9 +20,9 @@ export default function CustomImageList() {
       <div className="inner-image-list-u">
         <ImageList
           sx={{
-            width: 800,
-            height: 450,
-            marginLeft: 40,
+            width: 1200,
+            height: 600,
+            marginLeft: 15,
             // Promote the list into its own layer in Chrome. This costs memory, but helps keeping high FPS.
             transform: "translateZ(0)",
           }}
