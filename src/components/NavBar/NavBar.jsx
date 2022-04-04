@@ -16,7 +16,9 @@ const NavBar = () => {
         <Link to="/store" style={{ textDecoration: "none" }}>
           <h4>STORE</h4>
         </Link>
-        <h4>SKINS</h4>
+        <Link to="/skins">
+          <h4>SKINS</h4>
+        </Link>
         <Link to="/about" style={{ textDecoration: "none" }}>
           <h4> ABOUT</h4>
         </Link>

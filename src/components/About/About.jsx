@@ -1,133 +1,121 @@
-import * as React from "react";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
-import IconButton from "@mui/material/IconButton";
-import StarBorderIcon from "@mui/icons-material/StarBorder";
-
-function srcset(image, width, height, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${width * cols}&h=${height * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${width * cols}&h=${
-      height * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  };
-}
-
-export default function CustomImageList() {
+import { Button } from "@mui/material";
+import { color } from "@mui/system";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect } from "react";
+import "./About.css";
+const About = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
-    <div className="imagelist-u">
-      <div className="inner-image-list-u">
-        <ImageList
-          sx={{
-            width: 1200,
-            height: 600,
-            marginLeft: 15,
-            // Promote the list into its own layer in Chrome. This costs memory, but helps keeping high FPS.
-            transform: "translateZ(0)",
-          }}
-          rowHeight={200}
-          gap={1}
-        >
-          {itemData.map((item) => {
-            const cols = item.featured ? 2 : 1;
-            const rows = item.featured ? 2 : 1;
-
-            return (
-              <ImageListItem key={item.img} cols={cols} rows={rows}>
-                <img
-                  {...srcset(item.img, 250, 200, rows, cols)}
-                  alt={item.title}
-                  loading="lazy"
-                />
-                <ImageListItemBar
-                  sx={{
-                    background:
-                      "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, " +
-                      "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
-                  }}
-                  title={item.title}
-                  position="top"
-                  actionIcon={
-                    <IconButton
-                      sx={{ color: "white" }}
-                      aria-label={`star ${item.title}`}
-                    >
-                      <StarBorderIcon />
-                    </IconButton>
-                  }
-                  actionPosition="left"
-                />
-              </ImageListItem>
-            );
-          })}
-        </ImageList>
+    <>
+      <div className="first-part-u">
+        <div className="steam-definition-u">
+          <img
+            src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
+            alt=""
+          />
+          <p style={{ fontSize: "25px" }}>
+            Steam is the ultimate destination for playing, discussing, and
+            creating games.
+          </p>
+          <br />
+          <Button data-aos="flip-up" variant="outlined" color="error">
+            Install Steam
+          </Button>
+        </div>
+        <div className="about-video-u">
+          <video
+            autoPlay
+            muted
+            loop
+            src="https://cdn.cloudflare.steamstatic.com/store/about/videos/about_hero_loop_web.mp4"
+          ></video>
+        </div>
       </div>
-    </div>
+      {/* Part two */}
+      <div data-aos="flip-up" className="about-part-two-u">
+        <div className="part-two-text">
+          <p className="part-two-header">Access Games Instantly</p>
+          <p className="part-two-secondline">
+            With nearly 30,000 games from AAA to indie and everything
+            in-between. Enjoy exclusive deals, automatic game updates, and other
+            great perks.
+          </p>
+          <Button
+            className="browse-tag-u"
+            href="https://store.steampowered.com/"
+            color="secondary"
+            style={{ fontSize: "25px" }}
+          >
+            Browse the store 👉
+          </Button>
+        </div>
+        <div className="game-images">
+          <div>
+            <img
+              style={{
+                marginLeft: "600px",
+                fontSize: "25px",
+                width: "300px",
+                marginTop: "100px",
+              }}
+              data-aos="fade-down-left"
+              src="https://cdn.cloudflare.steamstatic.com/steam/apps/1418630/capsule_231x87.jpg?t=1647100775"
+            ></img>
+          </div>
+          <div>
+            <img
+              style={{ marginLeft: "100px", fontSize: "25px" }}
+              data-aos="fade-down-right"
+              src="https://cdn.cloudflare.steamstatic.com/steam/apps/359550/capsule_231x87.jpg?t=1647433052"
+            ></img>
+          </div>
+          <div>
+            <img
+              style={{ marginLeft: "1000px", fontSize: "25px", width: "300px" }}
+              data-aos="fade-down-left"
+              src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/capsule_231x87.jpg?t=1618856444"
+            ></img>
+          </div>
+          <div>
+            <img
+              style={{ marginLeft: "400px", fontSize: "25px", width: "400px" }}
+              data-aos="fade-down-right"
+              src="https://cdn.cloudflare.steamstatic.com/steam/apps/230410/capsule_231x87.jpg?t=1648492436"
+            ></img>
+          </div>
+          <div>
+            <img
+              style={{ marginLeft: "850px", fontSize: "25px", width: "200px" }}
+              data-aos="fade-down-left"
+              src="https://cdn.cloudflare.steamstatic.com/steam/apps/920210/capsule_231x87.jpg?t=1648818898"
+            ></img>
+          </div>
+          <div>
+            <img
+              style={{ marginLeft: "100px", fontSize: "25px", width: "200px" }}
+              data-aos="fade-down-right"
+              src="https://cdn.cloudflare.steamstatic.com/steam/apps/306130/capsule_231x87.jpg?t=1646864784"
+            ></img>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="third-part-text-u" data-aos="fade-down-right">
+          <p style={{ fontSize: "45px", fontColor: "#4caf50" }}>
+            Join the Community.
+          </p>
+          <p style={{ fontSize: "25px", fontColor: "#4caf50" }}>
+            Meet new people, join groups, form clans, chat in-game and more!
+            With over 100 million potential friends (or e nemies), the fun never
+            s t ops.
+          </p>
+        </div>
+      </div>
+    </>
   );
-}
-
-const itemData = [
-  {
-    img: "https://i.pinimg.com/originals/dd/20/89/dd2089f73343b9d1523fbeb440c542a5.png",
-    title: "Breakfast",
-    author: "@bkristastucchio",
-    featured: true,
-  },
-  {
-    img: "https://c4.wallpaperflare.com/wallpaper/521/994/322/counter-strike-global-offensive-howl-cs-go-m4a4-m4a4-howl-cs-go-hd-wallpaper-preview.jpg",
-    title: "Burger",
-    author: "@rollelflex_graphy726",
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5N-lX26_Vyl_tl-dFGiwJYv_iuFGmRcpOmg&usqp=CAU",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://cq.ru/storage/uploads/images/78787/112133.jpg",
-    title: "Coffee",
-    author: "@nolanissac",
-  },
-  {
-    img: "https://cdn.cloudflare.steamstatic.com/steam/apps/730/ss_92c05c1cb1319beb15ed92c63b6b1d6f261d2f64.600x338.jpg?t=1641233427",
-    title: "Hats",
-    author: "@hjrc33",
-  },
-  {
-    img: "https://cdn.cloudflare.steamstatic.com/steam/apps/730/ss_3cef516c1a3c338f2554f3f11790aba3b7c0add7.600x338.jpg?t=1641233427",
-    title: "Honey",
-    author: "@arwinneil",
-    featured: true,
-  },
-  {
-    img: "https://cdn.cloudflare.steamstatic.com/steam/apps/730/ss_60b4f959497899515f46012df805b0006ef21af6.600x338.jpg?t=1641233427",
-    title: "Basketball",
-    author: "@tjdragotta",
-  },
-  {
-    img: "https://cdn.cloudflare.steamstatic.com/steam/apps/730/ss_110be563b66dde31b3b00dcf7d2f644c50374f07.1920x1080.jpg?t=1641233427",
-    title: "Fern",
-    author: "@katie_wasserman",
-  },
-  {
-    img: "https://cdn.cloudflare.steamstatic.com/steam/apps/730/ss_34090867f1a02b6c17652ba9043e3f622ed985a9.1920x1080.jpg?t=1641233427",
-    title: "Mushrooms",
-    author: "@silverdalex",
-  },
-  {
-    img: "https://cdn.cloudflare.steamstatic.com/steam/apps/730/ss_2b9e362287b509bb3864fa7bad654fe1fda0f7ed.1920x1080.jpg?t=1641233427",
-    title: "Tomato basil",
-    author: "@shelleypauls",
-  },
-  {
-    img: "https://cdn.cloudflare.steamstatic.com/steam/apps/730/ss_855c016cde14b7cec5c3d2523589b9054c030010.1920x1080.jpg?t=1641233427",
-    title: "Sea star",
-    author: "@peterlaster",
-  },
-  {
-    img: "https://cdn.cloudflare.steamstatic.com/steam/apps/730/ss_8c9cce9a9dde7b9c020837dcbd4615efe6f77d66.1920x1080.jpg?t=1641233427",
-    title: "Bike",
-    author: "@southside_customs",
-  },
-];
+};
+export default About;

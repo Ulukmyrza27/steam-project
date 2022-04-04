@@ -15,7 +15,7 @@ const reducer = (state = INIT_STATE, action) => {
     case "GET_GUN_DATA":
       return { ...state, gun: action.payload };
     case "GET_GUNS":
-      return { ...state, editGun: action.payload.data };
+      return { ...state, editGun: action.payload };
     default:
       return state;
   }

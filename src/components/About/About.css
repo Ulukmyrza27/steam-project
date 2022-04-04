@@ -1,3 +1,91 @@
-.about-u {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.first-part-u {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.about-video-u {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  height: 1000px;
+  width: 80%;
+  flex-wrap: wrap;
+  opacity: rgba(0, 0, 0, 0.294);
+}
+.steam-definition-u {
+  /* margin: 200px 250px; */
+  color: antiquewhite;
+  margin-top: 50px;
+  font-size: 34px;
+  font-family: "Motiva Sans", Sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-button {
+  border: antiquewhite;
+}
+.about-button:hover {
+  color: grey;
+}
+.about-part-two-u {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 800px;
+}
+.part-two-text {
+  width: 30%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 34px;
+}
+.part-two-header {
+  font-size: 35px;
+  color: whitesmoke;
+  font-family: "Motiva Sans", Sans-serif;
+}
+.part-two-secondline {
+  font-size: 25px;
+  color: whitesmoke;
+  font-family: "Motiva Sans", Sans-serif;
+}
+.browse-tag-u {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: "Motiva Sans", Sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* .game-images {
+  margin-top: 100px;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: initial;
+  size: 500px;
+} */
+.third-part-text-u {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: white;
+  margin: 5% auto;
+  width: 500px;
+  height: 800px;
+  font-family: "Motiva Sans", Sans-serif;
 }

@@ -8,9 +8,16 @@ import Typography from "@mui/material/Typography";
 import { contexts } from "../../contexts/Context";
 import "./SteamList.css";
 import { Link, useSearchParams } from "react-router-dom";
+import Filter from "../Filter.js/Filter";
+import { FileSearchOutlined } from "@ant-design/icons";
 
 const SteamList = () => {
   // pagination start
+
+  const [brand, setBrand] = useState([]);
+  const [price, setPrice] = useState([1, 500]);
+  const [show, setShow] = useState(false);
+
   const [page, setPage] = useState(1);
   useEffect(() => {
     getGunData();
@@ -26,10 +33,13 @@ const SteamList = () => {
   useEffect(() => {
     setsearchParams({
       q: searchValue,
+      brand: brand,
+      price_gte: price[0],
+      price_lte: price[1],
       _limit: 8,
       _page: page,
     });
-  }, [searchValue, page]);
+  }, [searchValue, page, price, brand]);
 
   useEffect(() => {
     getGunData();
@@ -61,6 +71,35 @@ const SteamList = () => {
           className="search"
         />
       </div>
+
+      <div
+        style={{
+          textAlign: "center",
+          margin: "10px auto",
+          cursor: "pointer",
+          width: "100%",
+          maxWidth: "200px",
+        }}
+        onClick={() => setShow(!show)}
+      >
+        {show ? (
+          <FileSearchOutlined style={{ fontSize: "30px", color: "blue" }} />
+        ) : (
+          <FileSearchOutlined
+            style={{ fontSize: "30px", textAlign: "center", color: "blue" }}
+          />
+        )}
+      </div>
+      {show ? (
+        <div className="list-filter">
+          <Filter
+            brand={brand}
+            setBrand={setBrand}
+            price={price}
+            setPrice={setPrice}
+          />
+        </div>
+      ) : null}
 
       <div className="block-u">
         {gun.map((item) => (
@@ -99,19 +138,37 @@ const SteamList = () => {
           </Card>
         ))}
       </div>
-      <button
-        disabled={page == 1 ? true : false}
-        onClick={() => setPage(page - 1)}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
       >
-        prev
-      </button>
-      {page}
-      <button
-        disabled={page == page - 1 ? true : false}
-        onClick={() => setPage(page + 1)}
-      >
-        next
-      </button>
+        <button
+          className="btn-page"
+          disabled={page == 1 ? true : false}
+          onClick={() => setPage(page - 1)}
+        >
+          prev
+        </button>
+        <h2
+          style={{
+            color: "white",
+            textAlign: "center",
+          }}
+        >
+          {page}
+        </h2>
+
+        <button
+          className="btn-page"
+          disabled={page == page - 1 ? true : false}
+          onClick={() => setPage(page + 1)}
+        >
+          next
+        </button>
+      </div>
     </div>
   );
 };
