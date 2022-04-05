@@ -10,9 +10,12 @@ import "./SteamList.css";
 import { Link, useSearchParams } from "react-router-dom";
 import Filter from "../Filter.js/Filter";
 import { FileSearchOutlined } from "@ant-design/icons";
+import { cartContext } from "../../contexts/cartContext";
 import { contexts } from "../../contexts/context";
 
-const SteamList = () => {
+const SteamCard = (item) => {
+  const { addProductToCart, checkItemInCart } = useContext(cartContext);
+  const [checkInCart, setCheckInCart] = useState(checkItemInCart(item.id));
   // pagination start
 
   const [brand, setBrand] = useState([]);
@@ -48,7 +51,7 @@ const SteamList = () => {
 
   // search end
 
-  const { gun, getGunData, editGun, deleteGun } = useContext(contexts);
+  const { gun, getGunData } = useContext(contexts);
   useEffect(() => {
     getGunData();
   }, []);
@@ -61,6 +64,7 @@ const SteamList = () => {
           height: "60px",
           display: "flex",
           justifyContent: "center",
+          color: "white",
         }}
       >
         {" "}
@@ -128,12 +132,20 @@ const SteamList = () => {
             </CardContent>
             <CardActions>
               <Link to={`/edit/${item.id}`}>
-                <Button onClick={() => editGun(item.id)} size="small">
-                  Edit
-                </Button>
+                <Button size="small">Like</Button>
               </Link>
-              <Button onClick={() => deleteGun(item.id)} size="small">
-                Delete
+              <Button
+                style={{
+                  color: checkInCart ? "red" : "black",
+                  fontSize: "25px",
+                }}
+                onClick={() => {
+                  addProductToCart(item);
+                  setCheckInCart(checkItemInCart(item.id));
+                }}
+                size="small"
+              >
+                Add to cart
               </Button>
             </CardActions>
           </Card>
@@ -148,7 +160,7 @@ const SteamList = () => {
       >
         <button
           className="btn-page"
-          disabled={page == 1 ? true : false}
+          disabled={page === 1 ? true : false}
           onClick={() => setPage(page - 1)}
         >
           prev
@@ -174,4 +186,4 @@ const SteamList = () => {
   );
 };
 
-export default SteamList;
+export default SteamCard;

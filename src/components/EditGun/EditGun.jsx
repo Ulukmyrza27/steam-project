@@ -2,8 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import { useNavigate, useParams } from "react-router-dom";
 import { Backdrop, CircularProgress } from "@mui/material";
-import { contexts } from "../../contexts/Context";
+
 import "./EditGun.css";
+import { contexts } from "../../contexts/context";
 
 const EditGun = () => {
   const { editGun, getEditGun, upDateGun } = useContext(contexts);

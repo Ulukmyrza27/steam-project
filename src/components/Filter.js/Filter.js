@@ -1,6 +1,7 @@
 import { Select, Slider } from "antd";
 import React, { useContext } from "react";
-import { contexts } from "../../contexts/Context";
+import { contexts } from "../../contexts/context";
+
 import "./Filter.css";
 
 const Filter = ({ brand, setBrand, price, setPrice }) => {
