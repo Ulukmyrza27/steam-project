@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./Skins.css";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
@@ -15,14 +16,25 @@ function srcset(image, width, height, rows = 1, cols = 1) {
 export default function CustomImageList() {
   return (
     <div className="imagelist-u">
+      <div
+        style={{
+          width: "100%",
+          height: "100px",
+          display: "flex",
+          flexDirection: "column",
+          padding: "0 150px",
+        }}
+      >
+        <h1 style={{ color: "white" }}>GAMES POSITION</h1>
+        <div className="gorizont-1f"></div>
+      </div>
       <div className="inner-image-list-u">
         <ImageList
           sx={{
-            width: 1000,
+            width: "80%",
 
             height: 600,
-
-            marginLeft: 15,
+            margin: "15px auto",
 
             // Promote the list into its own layer in Chrome. This costs memory, but helps keeping high FPS.
 

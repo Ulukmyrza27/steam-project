@@ -10,6 +10,7 @@ import Skins from "./components/Skins/Skins";
 import SteamList from "./components/SteamList/SteamList";
 import HomePage from "./components/HomePage/HomePage";
 import EditGun from "./components/EditGun/EditGun";
+import Buy from "./components/buyMenu/Buy";
 
 const Routing = () => {
   return (
@@ -23,6 +24,7 @@ const Routing = () => {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/edit/:id" element={<EditGun />} />
+        <Route path="/buy" element={<Buy />} />
       </Routes>
       <Header />
       <Footer />

@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import "./AddGun.css";
-import Stack from "@mui/material/Stack";
 
 import { useNavigate } from "react-router-dom";
 import { contexts } from "../../contexts/Context";

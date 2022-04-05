@@ -22,12 +22,13 @@ const About = () => {
             creating games.
           </p>
           <br />
-          <Button data-aos="flip-up" variant="outlined" color="error">
+          <Button data-aos="flip-up" variant="outlined">
             Install Steam
           </Button>
         </div>
         <div className="about-video-u">
           <video
+            width="70%"
             autoPlay
             muted
             loop
@@ -57,7 +58,7 @@ const About = () => {
           <div>
             <img
               style={{
-                marginLeft: "600px",
+                marginLeft: "500px",
                 fontSize: "25px",
                 width: "300px",
                 marginTop: "100px",
@@ -75,28 +76,28 @@ const About = () => {
           </div>
           <div>
             <img
-              style={{ marginLeft: "1000px", fontSize: "25px", width: "300px" }}
+              style={{ fontSize: "25px", width: "300px", marginLeft: "400px" }}
               data-aos="fade-down-left"
               src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/capsule_231x87.jpg?t=1618856444"
             ></img>
           </div>
           <div>
             <img
-              style={{ marginLeft: "400px", fontSize: "25px", width: "400px" }}
+              style={{ fontSize: "25px", width: "400px", marginLeft: "50px" }}
               data-aos="fade-down-right"
               src="https://cdn.cloudflare.steamstatic.com/steam/apps/230410/capsule_231x87.jpg?t=1648492436"
             ></img>
           </div>
           <div>
             <img
-              style={{ marginLeft: "850px", fontSize: "25px", width: "200px" }}
+              style={{ fontSize: "25px", width: "200px", marginLeft: "400px" }}
               data-aos="fade-down-left"
               src="https://cdn.cloudflare.steamstatic.com/steam/apps/920210/capsule_231x87.jpg?t=1648818898"
             ></img>
           </div>
           <div>
             <img
-              style={{ marginLeft: "100px", fontSize: "25px", width: "200px" }}
+              style={{ fontSize: "25px", width: "200px" }}
               data-aos="fade-down-right"
               src="https://cdn.cloudflare.steamstatic.com/steam/apps/306130/capsule_231x87.jpg?t=1646864784"
             ></img>
