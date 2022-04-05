@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import "./AddGun.css";
-import Stack from "@mui/material/Stack";
 
 import { useNavigate } from "react-router-dom";
 import { contexts } from "../../contexts/Context";
@@ -54,11 +53,10 @@ const AddGun = () => {
             type="text"
             placeholder="Image"
           />
-          <Stack direction="row" spacing={2}>
-            <button className="add_btn" onClick={() => addGun()}>
-              Add Gun
-            </button>
-          </Stack>
+
+          <button className="add_btn" onClick={() => addGun()}>
+            Add Gun
+          </button>
         </div>
       </div>
     </div>

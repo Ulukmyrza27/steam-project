@@ -5,8 +5,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(https://cdn.cloudflare.steamstatic.com/store/home/store_home_share.jpg);
-  position: fixed;
   background-size: cover;
 }
 .add-gun {

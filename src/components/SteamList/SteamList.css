@@ -1,20 +1,42 @@
 .block-u {
-  width: 100%;
+  width: 80%;
   height: 100vh;
-  background-color: rgb(19, 31, 49);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 20px;
 }
 .card-gun-u {
-  margin-top: 20px;
   height: 350px;
-  margin-right: 10px;
-  width: 200px;
-  box-shadow: 0 5px 5px 0 rgba(190, 140, 140, 0.568);
+  width: 250px;
+  margin: 0 5px;
 }
 .card-media-gun-u {
   background-color: rgb(73, 68, 68);
+}
+
+.search {
+  width: 350px;
+  height: 50px;
+  padding-left: 20px;
+  border: none;
+  background-color: rgb(146, 153, 158);
+  border-radius: 4px;
+}
+.block-card-a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-gun-u:hover {
+  margin: 0 15px;
+  box-shadow: 5px 10px 5px rgb(7, 176, 16);
+}
+.btn-page {
+  background-color: blueviolet;
+  color: white;
+  width: 60px;
+  height: 30px;
 }
