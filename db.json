@@ -1,12 +1,6 @@
 {
   "guns": [
     {
-      "name": "Kalashnikov case",
-      "image": "https://market.games.mail.ru/s3/media/product/picture/2021/9/b088fa566f1349b84a9cebcdec350ef7.png",
-      "price": 39,
-      "id": 1
-    },
-    {
       "name": "Kel-Tec KS 7",
       "image": "https://market.games.mail.ru/s3/media/product/picture/2022/1/ec76d25606c86d1ed985871a20736409.png",
       "price": 39,
@@ -20,7 +14,7 @@
     },
     {
       "name": "Babochka",
-      "price": "399",
+      "price": "1399",
       "image": "https://market.games.mail.ru/s3/media/product/picture/2022/3/306de7976a27bd81b740dcceaa0a13e2.png",
       "id": 5
     },
@@ -68,8 +62,8 @@
     },
     {
       "name": "sdfsdf",
-      "price": "234244",
-      "image": "sdfsdfsdf",
+      "price": "123123",
+      "image": "sdfsdf",
       "id": 13
     }
   ]

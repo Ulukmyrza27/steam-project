@@ -4,12 +4,13 @@ body {
   position: static;
   background: fixed;
   background-image: url(https://generacionxbox.com/wp-content/uploads/2022/01/steam-generacionxbox.jpg);
+  overflow-x: hidden;
 }
 .navbar-abs {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 90%;
   height: 75px;
   margin: 0 100px;
   background-color: rgba(0, 255, 255, 0.138);
@@ -35,4 +36,8 @@ body {
 .search-u {
   size: 500px;
   color: violet;
+}
+
+.navbar__item-active {
+  color: rgba(237, 240, 243, 0.951);
 }

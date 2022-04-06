@@ -16,7 +16,7 @@ const CartItem = ({ item }) => {
   return (
     <List.Item
       key={item.id}
-      extra={<img width={272} alt="img" src={item.item.image1} />}
+      extra={<img width={272} alt="img" src={item.item.image} />}
     >
       <List.Item.Meta
         title={
@@ -28,8 +28,7 @@ const CartItem = ({ item }) => {
             }}
           >
             <div>
-              <h3>{item.item.brand}</h3>
-              <h4>{item.item.model}</h4>
+              <h3>{item.item.name}</h3>
             </div>
             <h3>{"$" + item.item.price}</h3>
           </div>

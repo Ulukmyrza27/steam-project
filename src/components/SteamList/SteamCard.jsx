@@ -131,9 +131,8 @@ const SteamCard = (item) => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link to={`/edit/${item.id}`}>
-                <Button size="small">Like</Button>
-              </Link>
+              <Button size="small">Like</Button>
+
               <Button
                 style={{
                   color: checkInCart ? "red" : "black",
