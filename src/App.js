@@ -1,5 +1,6 @@
 import "./App.css";
-import ContextProvider from "./contexts/Context";
+import ContextProvider from "./contexts/context";
+import CartContextProvider from "./contexts/cartContext";
 import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 
 import Routing from "./Routing";
@@ -8,7 +9,9 @@ function App() {
   return (
     <div>
       <ContextProvider>
-        <Routing />
+        <CartContextProvider>
+          <Routing />
+        </CartContextProvider>
       </ContextProvider>
     </div>
   );

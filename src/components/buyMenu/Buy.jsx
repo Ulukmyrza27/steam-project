@@ -1,7 +1,20 @@
-import React from "react";
+import { message } from "antd";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./buy.css";
 
 const Buy = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastname] = useState("");
+  const [number, setNumber] = useState("");
+  const [address, setAddress] = useState("");
+
+  function oplata() {
+    if (firstName.length == "") {
+      return setTimeout(() => message.warning("заполните поле!"));
+    }
+  }
+
   return (
     <div style={{ display: "flex", justifyContent: "flex-start" }}>
       <div className="buy-div" style={{ width: "40%", height: "100vh" }}>
@@ -12,6 +25,7 @@ const Buy = () => {
           style={{ width: "80%", height: "7%" }}
           type="text"
           placeholder=" First Name"
+          onChange={(e) => setFirstName(e.target.value)}
         />
         <br />
         <input
@@ -24,7 +38,7 @@ const Buy = () => {
         <input
           className="input-buy"
           style={{ width: "80%", height: "7%" }}
-          type="text"
+          type="number"
           placeholder="Number"
         />
         <br />
@@ -42,16 +56,19 @@ const Buy = () => {
           </p>
         </div>
         <div style={{ width: "80%", margin: "20px" }}>
-          <button
-            style={{
-              width: "150px",
-              height: "50px",
-              color: "white",
-              backgroundColor: "orange",
-            }}
-          >
-            buy{" "}
-          </button>
+          <Link to="/oplata">
+            {" "}
+            <button
+              style={{
+                width: "150px",
+                height: "50px",
+                color: "white",
+                backgroundColor: "orange",
+              }}
+            >
+              buy{" "}
+            </button>
+          </Link>
         </div>
       </div>
       <div>

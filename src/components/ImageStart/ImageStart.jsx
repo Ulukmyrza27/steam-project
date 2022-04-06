@@ -6,27 +6,27 @@ const ImageStart = () => {
     <div className="home-bg-a">
       <div className="image-start">
         <div>
-          <h1 className="v-v-v" style={{ color: "white" }}>
-            «СОВРЕМЕННЫЙ МНОГОПОЛЬЗОВАТЕЛЬСКИЙ ШЕДЕВР»
-          </h1>
+          <h1 className="v-v-v">«СОВРЕМЕННЫЙ МНОГОПОЛЬЗОВАТЕЛЬСКИЙ ШЕДЕВР»</h1>
         </div>
         <div>
           <button className="down-game">
-            <h3>Играть Бесплатно</h3>
-            <h5>Download Steam</h5>
+            <h3 style={{ color: "white" }}>Играть Бесплатно</h3>
+            <h5 style={{ color: "white" }}>Download Steam</h5>
           </button>
         </div>
 
         <div className="video-start">
           <video
-            width="580px"
+            style={{ margin: "0 30px" }}
+            width="500px"
             loop
             muted
             autoPlay
             src="https://cdn.akamai.steamstatic.com/steam/apps/256660296/microtrailer.webm?t=1454099186"
           ></video>
           <video
-            width="580px"
+            style={{ margin: "0 30px" }}
+            width="500px"
             loop
             muted
             autoPlay
@@ -141,7 +141,7 @@ const ImageStart = () => {
             src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/homepage/dota_montage_webm.webm"
           ></video>
         </div>
-        <div>
+        <div style={{ marginTop: "15px" }}>
           <h1 style={{ color: "white" }}>PUBG: BATTLEGROUNDS</h1>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
@@ -153,7 +153,7 @@ const ImageStart = () => {
             src="https://cdn.akamai.steamstatic.com/steam/apps/256864911/movie480_vp9.webm?t=1639450117"
           ></video>
         </div>
-        <div>
+        <div style={{ marginTop: "15px" }}>
           <h1 style={{ color: "white" }}>DETROIT</h1>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
