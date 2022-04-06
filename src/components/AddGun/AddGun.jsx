@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "./AddGun.css";
 
 import { useNavigate } from "react-router-dom";
-import { contexts } from "../../contexts/Context";
+import { contexts } from "../../contexts/context";
 
 const AddGun = () => {
   const { postGun } = useContext(contexts);

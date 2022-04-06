@@ -4,6 +4,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import IconButton from "@mui/material/IconButton";
+import SteamAdd from "../SteamAdd/SteamAdd";
 function srcset(image, width, height, rows = 1, cols = 1) {
   return {
     src: ` ${image}?w=${width * cols}&h=${height * rows}&fit=crop&auto=format`,
@@ -16,13 +17,14 @@ function srcset(image, width, height, rows = 1, cols = 1) {
 export default function CustomImageList() {
   return (
     <div className="imagelist-u">
+      <SteamAdd />
       <div
         style={{
           width: "100%",
           height: "100px",
           display: "flex",
           flexDirection: "column",
-          padding: "0 150px",
+          padding: "0 10px",
         }}
       >
         <h1 style={{ color: "white" }}>GAMES POSITION</h1>
@@ -76,6 +78,40 @@ export default function CustomImageList() {
             );
           })}
         </ImageList>
+      </div>
+      <div
+        style={{
+          width: "80%",
+          height: "500px",
+          margin: "10px 150px",
+          textAlign: "center",
+        }}
+      >
+        <h1 style={{ color: "yellow" }}>DESCRIPTION</h1>
+        <h3 style={{ color: "white", textAlign: "center" }}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+          possimus eum, at necessitatibus fugit maiores dolorem ex optio aliquam
+          dolore velit assumenda temporibus vero ipsa. Illum fuga sed ab
+          blanditiis repellat reprehenderit porro alias atque dolor fugiat
+          expedita at veritatis facere ex doloremque amet facilis, officiis a
+          placeat odio! Aliquid nisi illo itaque vitae minima. Voluptatibus
+          nesciunt minus voluptatem, sapiente a quisquam obcaecati debitis
+          deleniti, aut repudiandae doloribus, iusto inventore fuga quae
+          laboriosam expedita et. Sit accusantium nobis nihil quas nemo corrupti
+          aliquid sequi impedit rerum? Accusantium expedita consequatur
+          exercitationem saepe vitae? Odit temporibus, molestiae nulla tempore
+          praesentium magnam beatae? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Libero officia consectetur incidunt explicabo enim
+          minus pariatur at quae, porro dolor molestiae corporis beatae nostrum?
+          Ex, nostrum! Dolorum ut, architecto beatae tempora vero amet
+          doloremque nobis repellat ducimus cum ea ad porro. Quaerat nesciunt ut
+          temporibus? Commodi aspernatur iure dignissimos blanditiis tempore nam
+          maiores et id natus laudantium fuga, dolor, rem repellendus aliquid
+          consequatur! Culpa est rerum sit ut quae sed, qui similique at, nemo
+          quidem, unde dicta veritatis numquam esse id non quis eligendi enim
+          perferendis. Sit iusto harum, cumque voluptates aut reprehenderit
+          velit at unde atque! Nisi, facilis delectus.
+        </h3>
       </div>
     </div>
   );

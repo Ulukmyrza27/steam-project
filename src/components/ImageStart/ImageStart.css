@@ -16,7 +16,8 @@
   flex-wrap: wrap;
 }
 .card-game-a:hover {
-  box-shadow: 5px 5px 5px rgb(208, 65, 65);
+  box-shadow: 5px 5px 5px rgb(244, 234, 234);
+  cursor: pointer;
 }
 
 .card-game-a {
@@ -31,7 +32,7 @@
 .game-btn-a {
   width: 80%;
   height: 30px;
-  background-color: rgb(246, 141, 13);
+  background-color: rgb(24, 144, 231);
   border: none;
   border-radius: 2px;
 }
@@ -50,14 +51,16 @@
   position: static;
 }
 .v-v-v {
-  background-color: rgba(215, 104, 31, 0.356);
+  background-color: rgba(238, 140, 76, 0.168);
+  margin: 30px 0;
+  color: azure;
 }
 .down-game {
+  margin: 0 15px;
   width: 300px;
-  color: aliceblue;
-  border-color: aliceblue;
   border-radius: 5px;
-  background-color: rgba(240, 248, 255, 0.063);
+  background-color: rgba(9, 248, 156, 0.282);
+  border-color: rgb(62, 124, 64);
 }
 .down-game:hover {
   border-color: aqua;

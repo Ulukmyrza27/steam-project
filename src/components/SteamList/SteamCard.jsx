@@ -10,9 +10,17 @@ import "./SteamList.css";
 import { Link, useSearchParams } from "react-router-dom";
 import Filter from "../Filter.js/Filter";
 import { FileSearchOutlined } from "@ant-design/icons";
+import { cartContext } from "../../contexts/cartContext";
 import { contexts } from "../../contexts/context";
+import {
+  FireplaceOutlined,
+  HeartBrokenOutlined,
+  ShoppingCartOutlined,
+} from "@mui/icons-material";
 
-const SteamList = () => {
+const SteamCard = (item) => {
+  const { addProductToCart, checkItemInCart } = useContext(cartContext);
+  const [checkInCart, setCheckInCart] = useState(checkItemInCart(item.id));
   // pagination start
 
   const [brand, setBrand] = useState([]);
@@ -48,7 +56,7 @@ const SteamList = () => {
 
   // search end
 
-  const { gun, getGunData, editGun, deleteGun } = useContext(contexts);
+  const { gun, getGunData } = useContext(contexts);
   useEffect(() => {
     getGunData();
   }, []);
@@ -61,7 +69,7 @@ const SteamList = () => {
           height: "60px",
           display: "flex",
           justifyContent: "center",
-          margin: "20px",
+          color: "white",
         }}
       >
         {" "}
@@ -85,10 +93,10 @@ const SteamList = () => {
         onClick={() => setShow(!show)}
       >
         {show ? (
-          <FileSearchOutlined style={{ fontSize: "30px", color: "white" }} />
+          <FileSearchOutlined style={{ fontSize: "30px", color: "blue" }} />
         ) : (
           <FileSearchOutlined
-            style={{ fontSize: "30px", textAlign: "center", color: "red" }}
+            style={{ fontSize: "30px", textAlign: "center", color: "blue" }}
           />
         )}
       </div>
@@ -112,6 +120,7 @@ const SteamList = () => {
             // sx={{ maxWidth: 345, marginLeft: 70, backgroundColor: "#2f3e4f" }}
           >
             <CardMedia
+              className="card-media-gun-u"
               component="img"
               alt="img"
               height="200"
@@ -122,25 +131,43 @@ const SteamList = () => {
               <Typography gutterBottom variant="h6" component="div">
                 {item.name}
               </Typography>
-              <Typography variant="body2">{"$" + item.price}</Typography>
+              <Typography variant="body2" color="white">
+                {"$" + item.price}
+              </Typography>
             </CardContent>
-            <CardActions className="card-content-a">
+            <CardActions className="card-content-u">
               <Link to={`/edit/${item.id}`}>
-                <Button onClick={() => editGun(item.id)} size="small">
-                  Edit
+                <Button size="small">
+                  <HeartBrokenOutlined />
                 </Button>
               </Link>
-              <Button onClick={() => deleteGun(item.id)} size="small">
-                Delete
+              <Button
+                style={{
+                  color: checkInCart ? "red" : "black",
+                  fontSize: "25px",
+                }}
+                onClick={() => {
+                  addProductToCart(item);
+                  setCheckInCart(checkItemInCart(item.id));
+                }}
+                size="small"
+              >
+                <ShoppingCartOutlined />
               </Button>
             </CardActions>
           </Card>
         ))}
       </div>
-      <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <button
           className="btn-page"
-          disabled={page == 1 ? true : false}
+          disabled={page === 1 ? true : false}
           onClick={() => setPage(page - 1)}
         >
           prev
@@ -166,4 +193,4 @@ const SteamList = () => {
   );
 };
 
-export default SteamList;
+export default SteamCard;
