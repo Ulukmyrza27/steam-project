@@ -17,16 +17,14 @@ const ImageStart = () => {
 
         <div className="video-start">
           <video
-            style={{ margin: "0 30px" }}
-            width="500px"
+            style={{ margin: "30px 0 ", width: "40%" }}
             loop
             muted
             autoPlay
             src="https://cdn.akamai.steamstatic.com/steam/apps/256660296/microtrailer.webm?t=1454099186"
           ></video>
           <video
-            style={{ margin: "0 30px" }}
-            width="500px"
+            style={{ margin: "30px 0", width: "40%" }}
             loop
             muted
             autoPlay
@@ -165,20 +163,10 @@ const ImageStart = () => {
             src="https://cdn.cloudflare.steamstatic.com/steam/apps/256784014/microtrailer.webm?t=1590429401"
           ></video>
         </div>
-        <div
-          className="image-start-end"
-          style={{
-            width: "100%",
-            height: "200px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-          }}
-        >
+        <div className="image-start-end">
           {" "}
           <h1 style={{ color: "white" }}>Game Start</h1>{" "}
-          <h3 style={{ width: "80%", color: "white" }}>
+          <h3 style={{ width: "100%", color: "white" }}>
             Steam — онлайн-сервис цифрового распространения компьютерных игр и
             программ, разработанный и поддерживаемый компанией Valve. Steam
             выполняет роль средства технической защиты авторских прав, платформы

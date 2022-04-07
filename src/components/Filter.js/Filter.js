@@ -23,7 +23,7 @@ const Filter = ({ brand, setBrand, price, setPrice }) => {
         ))}
       </Select>
       <Slider
-        style={{ width: "500px" }}
+        style={{ width: "315px" }}
         value={price}
         onChange={(e) => setPrice(e)}
         defaultValue={[1, 500]}

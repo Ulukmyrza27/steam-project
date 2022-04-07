@@ -12,11 +12,9 @@ import Filter from "../Filter.js/Filter";
 import { FileSearchOutlined } from "@ant-design/icons";
 import { cartContext } from "../../contexts/cartContext";
 import { contexts } from "../../contexts/context";
-import {
-  FireplaceOutlined,
-  HeartBrokenOutlined,
-  ShoppingCartOutlined,
-} from "@mui/icons-material";
+import { ShoppingCartOutlined } from "@mui/icons-material";
+// import { FavoriteBorderIcon } from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const SteamCard = (item) => {
   const { addProductToCart, checkItemInCart } = useContext(cartContext);
@@ -123,8 +121,6 @@ const SteamCard = (item) => {
               className="card-media-gun-u"
               component="img"
               alt="img"
-              height="200"
-              // width="200"
               image={item.image}
             />
             <CardContent className="card-content-u">
@@ -138,7 +134,7 @@ const SteamCard = (item) => {
             <CardActions className="card-content-u">
               <Link to={`/edit/${item.id}`}>
                 <Button size="small">
-                  <HeartBrokenOutlined />
+                  <FavoriteIcon />
                 </Button>
               </Link>
               <Button
