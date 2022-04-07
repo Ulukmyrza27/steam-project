@@ -11,16 +11,17 @@ import { Link, useSearchParams } from "react-router-dom";
 import Filter from "../Filter.js/Filter";
 import { FileSearchOutlined } from "@ant-design/icons";
 import { cartContext } from "../../contexts/cartContext";
+import { favoritesContext } from "../../contexts/favoritesContext";
 import { contexts } from "../../contexts/context";
-import {
-  FireplaceOutlined,
-  HeartBrokenOutlined,
-  ShoppingCartOutlined,
-} from "@mui/icons-material";
+import { FireplaceOutlined, ShoppingCartOutlined } from "@mui/icons-material";
+// import { FavoriteBorderIcon } from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const SteamCard = (item) => {
   const { addProductToCart, checkItemInCart } = useContext(cartContext);
+  const { addProductToFav, checkItemInFav } = useContext(favoritesContext);
   const [checkInCart, setCheckInCart] = useState(checkItemInCart(item.id));
+  const [checkInFav, setCheckInFav] = useState(checkItemInFav(item.id));
   // pagination start
 
   const [brand, setBrand] = useState([]);
@@ -123,8 +124,6 @@ const SteamCard = (item) => {
               className="card-media-gun-u"
               component="img"
               alt="img"
-              height="200"
-              // width="200"
               image={item.image}
             />
             <CardContent className="card-content-u">
@@ -136,14 +135,23 @@ const SteamCard = (item) => {
               </Typography>
             </CardContent>
             <CardActions className="card-content-u">
-              <Link to={`/edit/${item.id}`}>
-                <Button size="small">
-                  <HeartBrokenOutlined />
-                </Button>
-              </Link>
               <Button
                 style={{
-                  color: checkInCart ? "red" : "black",
+                  color: checkInCart ? "black`" : "black",
+                  fontSize: "25px",
+                }}
+                onClick={() => {
+                  addProductToFav(item);
+                  setCheckInFav(checkItemInFav(item.id));
+                }}
+                size="small"
+              >
+                <FavoriteIcon />
+              </Button>
+
+              <Button
+                style={{
+                  color: checkInCart ? "black`" : "black",
                   fontSize: "25px",
                 }}
                 onClick={() => {

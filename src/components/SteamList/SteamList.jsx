@@ -102,12 +102,19 @@ const SteamList = () => {
           />
         </div>
       ) : null}
-
+      {/* <div className="products-list">
+        {products.length > 0 ? (
+          products.map((item) => <ProductCard key={item.id} item={item} />)
+        ) : (
+          <Empty style={{ marginBottom: "20px" }} />
+        )}
+      </div> */}
       <div className="block-u">
         {gun.map((item) => (
           <Card
             key={item.id}
             className="card-gun-u"
+            item={item}
 
             // sx={{ maxWidth: 345, marginLeft: 70, backgroundColor: "#2f3e4f" }}
           >

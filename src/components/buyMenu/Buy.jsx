@@ -16,8 +16,8 @@ const Buy = () => {
   }
 
   return (
-    <div style={{ display: "flex", justifyContent: "flex-start" }}>
-      <div className="buy-div" style={{ width: "40%", height: "100vh" }}>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className="buy-div" style={{ width: "80%", height: "100vh" }}>
         <h1 style={{ color: "white", marginTop: "20px" }}>PERSONAL DETAILS</h1>
         <br />
         <input
@@ -70,13 +70,6 @@ const Buy = () => {
             </button>
           </Link>
         </div>
-      </div>
-      <div>
-        <img
-          className="img-jostik"
-          src="https://miro.medium.com/max/1200/1*Ovna7BOMTTLWvghLXvHOpg.jpeg"
-          alt=""
-        />
       </div>
     </div>
   );

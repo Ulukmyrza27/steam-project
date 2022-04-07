@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -20,15 +21,9 @@ const Footer = () => {
           alignItems: "center",
         }}
       >
-        <div
-          style={{
-            width: "90%",
-            display: "flex",
-            justifyContent: "space-between",
-            margin: "40px",
-          }}
-        >
+        <div className="footer-steam-d">
           <img
+            className="image-footer-valve"
             style={{ width: "200px", height: "80px" }}
             src="https://store.cloudflare.steamstatic.com/public/images/footerLogo_valve_new.png"
             alt=""
@@ -39,20 +34,14 @@ const Footer = () => {
             </button>
           </a>
           <img
+            className="image-footer-valve"
             style={{ width: "200px" }}
             src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
             alt=""
           />
         </div>
-        <div
-          style={{
-            width: "90%",
-            display: "flex",
-            justifyContent: "space-between",
-            margin: "40px",
-          }}
-        >
-          <p style={{ color: "grey" }}>
+        <div className="footer-p-a">
+          <p style={{ color: "grey", textAlign: "center" }}>
             © 2022 Valve Corporation. Все права защищены. Все торговые марки
             являются собственностью соответствующих владельцев в США и других
             странах. НДС включён во все цены, где он применим. Политика
@@ -60,14 +49,7 @@ const Footer = () => {
             Steam | Возвраты | Файлы cookie
           </p>
         </div>
-        <div
-          style={{
-            width: "90%",
-            display: "flex",
-            justifyContent: "space-between",
-            margin: "40px",
-          }}
-        >
+        <div className="footer-zap">
           <a
             style={{ color: "white", textDecoration: "none" }}
             href="https://www.valvesoftware.com/ru/about"
