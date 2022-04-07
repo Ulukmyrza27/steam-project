@@ -18,6 +18,10 @@ import { authContext } from "./contexts/authContext";
 import { ADMIN_EMAIL } from "./helpers/consts";
 import Auth from "./components/Auth/Auth";
 
+import SteamAdd from "./components/SteamAdd/SteamAdd";
+import Buy from "./components/buyMenu/Buy";
+import Oplata from "./components/Oplata/Oplata";
+import Favorites from "./components/Favorites/Favorites";
 const Routing = () => {
   const { currentUser } = useContext(authContext);
   let PUBLIC_ROUTES = [
@@ -50,6 +54,26 @@ const Routing = () => {
       link: "/auth",
       element: <Auth />,
       id: 6,
+    },
+    {
+      link: "/sly",
+      element: <SteamAdd />,
+      id: 7,
+    },
+    {
+      link: "/buy",
+      element: <Buy />,
+      id: 8,
+    },
+    {
+      link: "/oplata",
+      element: <Oplata />,
+      id: 9,
+    },
+    {
+      link: "/favorites",
+      element: <Favorites />,
+      id: 10,
     },
   ];
   const ADMIN_ROUTES = [

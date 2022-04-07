@@ -61,6 +61,7 @@ const SteamList = () => {
           height: "60px",
           display: "flex",
           justifyContent: "center",
+          margin: "20px",
         }}
       >
         {" "}
@@ -84,10 +85,10 @@ const SteamList = () => {
         onClick={() => setShow(!show)}
       >
         {show ? (
-          <FileSearchOutlined style={{ fontSize: "30px", color: "blue" }} />
+          <FileSearchOutlined style={{ fontSize: "30px", color: "white" }} />
         ) : (
           <FileSearchOutlined
-            style={{ fontSize: "30px", textAlign: "center", color: "blue" }}
+            style={{ fontSize: "30px", textAlign: "center", color: "red" }}
           />
         )}
       </div>
@@ -101,17 +102,23 @@ const SteamList = () => {
           />
         </div>
       ) : null}
-
+      {/* <div className="products-list">
+        {products.length > 0 ? (
+          products.map((item) => <ProductCard key={item.id} item={item} />)
+        ) : (
+          <Empty style={{ marginBottom: "20px" }} />
+        )}
+      </div> */}
       <div className="block-u">
         {gun.map((item) => (
           <Card
             key={item.id}
             className="card-gun-u"
+            item={item}
 
             // sx={{ maxWidth: 345, marginLeft: 70, backgroundColor: "#2f3e4f" }}
           >
             <CardMedia
-              className="card-media-gun-u"
               component="img"
               alt="img"
               height="200"
@@ -122,11 +129,9 @@ const SteamList = () => {
               <Typography gutterBottom variant="h6" component="div">
                 {item.name}
               </Typography>
-              <Typography variant="body2" color="white">
-                {"$" + item.price}
-              </Typography>
+              <Typography variant="body2">{"$" + item.price}</Typography>
             </CardContent>
-            <CardActions>
+            <CardActions className="card-content-a">
               <Link to={`/edit/${item.id}`}>
                 <Button onClick={() => editGun(item.id)} size="small">
                   Edit
@@ -139,13 +144,7 @@ const SteamList = () => {
           </Card>
         ))}
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <div>
         <button
           className="btn-page"
           disabled={page == 1 ? true : false}

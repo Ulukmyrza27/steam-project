@@ -6,8 +6,10 @@ import {
   ShoppingCartOutlined,
   UserOutlined,
   LogoutOutlined,
+  HeartOutlined,
 } from "@ant-design/icons";
 import { cartContext } from "../../contexts/cartContext";
+import { favoritesContext } from "../../contexts/favoritesContext";
 import { authContext } from "../../contexts/authContext";
 import { ADMIN_EMAIL } from "../../helpers/consts";
 
@@ -18,6 +20,10 @@ const NavBar = () => {
   const { getCart, cartLength } = useContext(cartContext);
   useEffect(() => {
     getCart();
+  }, []);
+  const { getFav, favLength } = useContext(favoritesContext);
+  useEffect(() => {
+    getFav();
   }, []);
   const NAV_ITEMS = [
     {
@@ -69,7 +75,13 @@ const NavBar = () => {
               <h4> ADMIN</h4>
             </Link>
           ) : null}
-
+          <Link to="/favorites">
+            <Badge count={+favLength}>
+              <HeartOutlined
+                style={{ size: "large", fontSize: "30px", cursor: "pointer" }}
+              />
+            </Badge>
+          </Link>
           <Link to="/cart">
             <Badge count={+cartLength}>
               <ShoppingCartOutlined

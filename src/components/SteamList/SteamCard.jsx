@@ -11,11 +11,16 @@ import { Link, useSearchParams } from "react-router-dom";
 import Filter from "../Filter.js/Filter";
 import { FileSearchOutlined } from "@ant-design/icons";
 import { cartContext } from "../../contexts/cartContext";
+import { favoritesContext } from "../../contexts/favoritesContext";
 import { contexts } from "../../contexts/context";
+import { FireplaceOutlined, ShoppingCartOutlined } from "@mui/icons-material";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const SteamCard = (item) => {
   const { addProductToCart, checkItemInCart } = useContext(cartContext);
+  const { addProductToFav, checkItemInFav } = useContext(favoritesContext);
   const [checkInCart, setCheckInCart] = useState(checkItemInCart(item.id));
+  const [checkInFav, setCheckInFav] = useState(checkItemInFav(item.id));
   // pagination start
 
   const [brand, setBrand] = useState([]);
@@ -130,12 +135,24 @@ const SteamCard = (item) => {
                 {"$" + item.price}
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Like</Button>
+            <CardActions className="card-content-u">
+              <Button
+                style={{
+                  color: checkInCart ? "black`" : "black",
+                  fontSize: "25px",
+                }}
+                onClick={() => {
+                  addProductToFav(item);
+                  setCheckInFav(checkItemInFav(item.id));
+                }}
+                size="small"
+              >
+                <FavoriteIcon />
+              </Button>
 
               <Button
                 style={{
-                  color: checkInCart ? "red" : "black",
+                  color: checkInCart ? "black`" : "black",
                   fontSize: "25px",
                 }}
                 onClick={() => {
@@ -144,7 +161,7 @@ const SteamCard = (item) => {
                 }}
                 size="small"
               >
-                Add to cart
+                <ShoppingCartOutlined />
               </Button>
             </CardActions>
           </Card>

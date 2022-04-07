@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -38,11 +39,13 @@ const Footer = () => {
               <h1>Download Steam</h1>
             </button>
           </a>
-          <img
-            style={{ width: "200px" }}
-            src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
-            alt=""
-          />
+          <Link to="/store">
+            <img
+              style={{ width: "200px" }}
+              src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
+              alt=""
+            />
+          </Link>
         </div>
         <div
           style={{

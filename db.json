@@ -37,7 +37,7 @@
       "id": 8
     },
     {
-      "name": "HX Outdoors Trident 'WII'",
+      "name": "HX Outdoors Trident",
       "image": "https://market.games.mail.ru/s3/media/product/picture/2022/3/d5398cf5468f726441d601e6bc5a4c22.png",
       "price": 499,
       "id": 9
@@ -65,6 +65,12 @@
       "price": "123123",
       "image": "sdfsdf",
       "id": 13
+    },
+    {
+      "name": "ghsdfjd",
+      "price": "423",
+      "image": "dfhj",
+      "id": 14
     }
   ]
 }

@@ -43,7 +43,7 @@ const EditGun = () => {
         <input
           className="input"
           type="text"
-          name="product"
+          name="name"
           value={edit.name}
           placeholder="Title"
           onChange={handleValue}

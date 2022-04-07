@@ -15,7 +15,7 @@ const Cart = () => {
         itemLayout="vertical"
         size="large"
         dataSource={cart?.products}
-        footer={<h2>Total: {cart?.totalPrice}$</h2>}
+        footer={<h2 style={{ color: "white" }}>Total: {cart?.totalPrice}$</h2>}
         renderItem={(item) => <CartItem item={item} />}
       />
     </div>

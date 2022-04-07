@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { List, InputNumber, Button, message, Popconfirm } from "antd";
 import { cartContext } from "../../contexts/cartContext";
+import { Link } from "react-router-dom";
 
 const CartItem = ({ item }) => {
   // console.log(item);
@@ -28,9 +29,9 @@ const CartItem = ({ item }) => {
             }}
           >
             <div>
-              <h3>{item.item.name}</h3>
+              <h3 style={{ color: "white" }}>{item.item.name}</h3>
             </div>
-            <h3>{"$" + item.item.price}</h3>
+            <h3 color="white">{"$" + item.item.price}</h3>
           </div>
         }
         description={
@@ -45,7 +46,7 @@ const CartItem = ({ item }) => {
               }}
             >
               <div>
-                <h4>Quantity</h4>
+                <h4 style={{ color: "white" }}>Quantity</h4>
                 <Button
                   onClick={() =>
                     changeProductCount(item.count - 1, item.item.id)
@@ -63,8 +64,8 @@ const CartItem = ({ item }) => {
                 </Button>
               </div>
               <div>
-                <h4>SubPrice</h4>
-                <h3>{"$" + item.subPrice}</h3>
+                <h4 style={{ color: "white" }}>SubPrice</h4>
+                <h3 style={{ color: "white" }}>{"$" + item.subPrice}</h3>
               </div>
             </div>
             <Popconfirm
@@ -76,6 +77,19 @@ const CartItem = ({ item }) => {
             >
               <Button>Remove from cart</Button>
             </Popconfirm>
+            <Link to="/buy">
+              <button
+                style={{
+                  width: "100px",
+                  height: "33px",
+                  color: "white",
+                  backgroundColor: "orange",
+                }}
+              >
+                {" "}
+                BUY
+              </button>
+            </Link>
           </>
         }
       />
