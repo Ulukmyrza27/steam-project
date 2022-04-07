@@ -13,7 +13,7 @@ const SteamAdd = () => {
   };
 
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%", height: "100%" }}>
       <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
         <h1
           className="skins_bg"
@@ -22,20 +22,14 @@ const SteamAdd = () => {
           SKINS
         </h1>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-around",
-        }}
-      >
-        <div style={{ width: "700px", height: "500px" }}>
+      <div className="responsive-div">
+        <div className="responsive-a-c">
           <h1 style={{ color: "white", fontWeight: "bold" }}>ASIMOV</h1>
-          <Carousel autoplay>
+          <Carousel className="responsive-a-k" autoplay>
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://s3-eu-central-1.amazonaws.com/www-staging.esports.com/WP%20Media%20Folder%20-%20esports-com//var/app/current/web/app/uploads/2020/10/asimov-ak47-768x432.jpg"
                   alt=""
                 />
@@ -44,7 +38,7 @@ const SteamAdd = () => {
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://s1.1zoom.me/b5050/191/431843-Kycb_1366x768.jpg"
                   alt=""
                 />
@@ -53,7 +47,7 @@ const SteamAdd = () => {
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://i.ytimg.com/vi/LGPQn-evfGM/maxresdefault.jpg"
                   alt=""
                 />
@@ -62,7 +56,7 @@ const SteamAdd = () => {
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://ae01.alicdn.com/kf/HTB1TxcQIVXXXXa7XFXXq6xXFXXXQ/Posters-P250-Asiimov-asiimov-Coridium-CSGO-Counter-Strike-Global-Offensive-Skin-Weapon-Printing-cloth-silk-on.jpg"
                   alt=""
                 />
@@ -70,7 +64,7 @@ const SteamAdd = () => {
             </div>
           </Carousel>
         </div>
-        <div style={{ width: "700px", height: "500px" }}>
+        <div className="responsive-a-s">
           <h1 style={{ color: "yellow" }}>DESCRIPTION</h1>
           <h3 style={{ color: "white" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
@@ -88,13 +82,13 @@ const SteamAdd = () => {
           </h3>
         </div>
 
-        <div style={{ width: "700px", height: "500px" }}>
+        <div className="responsive-a-c">
           <h1 style={{ color: "brown", fontWeight: "bold" }}>ASIMOV BLACK</h1>
-          <Carousel autoplay>
+          <Carousel className="responsive-a-k" autoplay>
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://img3.goodfon.ru/wallpaper/nbig/9/16/bizon-asiimov-asiimov.jpg"
                   alt=""
                 />
@@ -103,7 +97,7 @@ const SteamAdd = () => {
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://img3.goodfon.ru/wallpaper/nbig/f/22/tec9-asiimov-isaac-asiimov.jpg"
                   alt=""
                 />
@@ -112,7 +106,7 @@ const SteamAdd = () => {
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://wf.cdn.gmru.net/ms/data/newsx/96cf1a923c26df16cb50591e20b1206b.jpg"
                   alt=""
                 />
@@ -121,7 +115,7 @@ const SteamAdd = () => {
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://wf.cdn.gmru.net/ms/a8aad2815ed0f9e5b340ecdb4af3e9f9.png"
                   alt=""
                 />
@@ -129,7 +123,7 @@ const SteamAdd = () => {
             </div>
           </Carousel>
         </div>
-        <div style={{ width: "700px", height: "500px" }}>
+        <div className="responsive-a-s">
           <h1 style={{ color: "yellow" }}>DESCRIPTION</h1>
           <h3 style={{ color: "white" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
@@ -146,13 +140,13 @@ const SteamAdd = () => {
             nulla tempore praesentium magnam beatae?
           </h3>
         </div>
-        <div style={{ width: "700px", height: "500px" }}>
+        <div className="responsive-a-c">
           <h1 style={{ color: "white", fontWeight: "bold" }}>Bad Santa</h1>
-          <Carousel autoplay>
+          <Carousel className="responsive-a-k" autoplay>
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://blog.cs.money/wp-content/uploads/2022/01/awp-_-wildfire.png"
                   alt=""
                 />
@@ -161,7 +155,7 @@ const SteamAdd = () => {
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://blog.cs.money/wp-content/uploads/2022/01/ak-47-_-neon-rider-2.png"
                   alt=""
                 />
@@ -170,7 +164,7 @@ const SteamAdd = () => {
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://blog.cs.money/wp-content/uploads/2022/01/mp9-_-food-chain.png"
                   alt=""
                 />
@@ -179,7 +173,7 @@ const SteamAdd = () => {
             <div>
               <h3 style={contentStyle}>
                 <img
-                  style={{ width: "700px", height: "400px" }}
+                  className="responsive-a"
                   src="https://blog.cs.money/wp-content/uploads/2022/01/glock-18-_-gamma-doppler-1.png"
                   alt=""
                 />
@@ -187,7 +181,7 @@ const SteamAdd = () => {
             </div>
           </Carousel>
         </div>
-        <div style={{ width: "700px", height: "500px" }}>
+        <div className="responsive-a-s">
           <h1 style={{ color: "yellow" }}>DESCRIPTION</h1>
           <h3 style={{ color: "white" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,

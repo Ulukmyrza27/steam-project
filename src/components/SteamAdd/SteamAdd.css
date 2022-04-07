@@ -2,5 +2,46 @@
   color: cadetblue;
   width: 500px;
   text-align: center;
-  margin-top: 20px;
+}
+.responsive-a {
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-a-k {
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-a-c {
+  width: 700px;
+  height: 500px;
+}
+.responsive-a-s {
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
+}
+.responsive-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 733px) {
+  .responsive-a-c {
+    width: 600px;
+    height: 500px;
+  }
+}
+@media (max-width: 620px) {
+  .responsive-a-c {
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (max-width: 510px) {
+  .responsive-a-c {
+    display: none;
+  }
 }

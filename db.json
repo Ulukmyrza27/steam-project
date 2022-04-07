@@ -71,6 +71,12 @@
       "price": "423",
       "image": "dfhj",
       "id": 14
+    },
+    {
+      "name": "awm",
+      "price": "1980",
+      "image": "https://w7.pngwing.com/pngs/751/891/png-transparent-counter-strike-global-offensive-weapon-sg-553-sniper-rifle-video-game-weapon-game-video-game-machine-gun.png",
+      "id": 15
     }
   ]
 }

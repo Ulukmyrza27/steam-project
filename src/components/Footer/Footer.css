@@ -27,3 +27,60 @@
   );
   color: aliceblue;
 }
+.footer-zap {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer-zap a {
+  margin: 0 10px;
+}
+.footer-steam-d {
+  width: "100%";
+  display: "flex";
+  justify-content: space-around;
+}
+
+.footer-p-a {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+}
+.image-footer-valve {
+  margin: 0 auto;
+}
+@media (max-width: 823px) {
+  .download-steam {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .footer-steam-d {
+    width: "100%";
+    display: "flex";
+    margin: 0 20%;
+  }
+  .image-footer-valve {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 385px) {
+  .footer-zap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-p-a {
+    display: none;
+  }
+}
+@media (max-width: 378px) {
+  .footer-zap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -8,12 +8,11 @@
 }
 .image-csa {
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  height: 1000px;
-  width: 80%;
   flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 .card-game-a:hover {
   box-shadow: 5px 5px 5px rgb(244, 234, 234);
@@ -28,6 +27,7 @@
   width: 250px;
   height: 400px;
   background-color: rgba(77, 131, 213, 0.459);
+  margin: 30px;
 }
 .game-btn-a {
   width: 80%;
@@ -41,10 +41,11 @@
   cursor: pointer;
 }
 .video-start {
-  width: 85%;
-  height: 380px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .home-bg-a {
   width: 100%;
@@ -54,9 +55,11 @@
   background-color: rgba(238, 140, 76, 0.168);
   margin: 30px 0;
   color: azure;
+  text-align: center;
+  width: 100%;
 }
 .down-game {
-  margin: 0 15px;
+  margin: 0 10px;
   width: 300px;
   border-radius: 5px;
   background-color: rgba(9, 248, 156, 0.282);
@@ -72,4 +75,19 @@
 }
 .image-start-end {
   background-color: rgba(124, 63, 63, 0.681);
+  width: "100%";
+  height: "200px";
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+  flex-direction: "column";
+  text-align: center;
+}
+@media (max-width: 415px) {
+  .v-v-v {
+    font-size: 20px;
+  }
+  .video-start {
+    padding: 0;
+  }
 }

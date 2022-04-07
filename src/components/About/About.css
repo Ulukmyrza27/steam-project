@@ -123,7 +123,7 @@
 .esckg-u {
   width: 400px;
 }
-@media screen and (max-width: 1440px) {
+/* @media screen and (max-width: 1440px) {
   .container {
     width: 1200px;
   }
@@ -132,10 +132,10 @@
   }
   .steam-definition-u {
     font-size: 34px;
-  }
-  /* .about-video-u {
   } */
-}
+/* .about-video-u {
+  } */
+/* }
 @media screen and (max-width: 1200px) {
   .container {
     width: 960px;
@@ -145,10 +145,10 @@
   }
   .steam-definition-u {
     font-size: 30px;
-  }
-  /* .about-video-u {
   } */
-}
+/* .about-video-u {
+  } */
+/* }
 @media screen and (max-width: 992px) {
   .container {
     width: 880px;
@@ -158,10 +158,10 @@
   }
   .steam-definition-u {
     font-size: 20px;
-  }
-  /* .about-video-u {
   } */
-}
+/* .about-video-u {
+  } */
+/* }
 
 @media screen and (max-width: 768px) {
   .container {
@@ -186,10 +186,10 @@
   }
   .steam-definition-u {
     font-size: 12px;
-  }
-  /* .about-video-u {
   } */
-}
+/* .about-video-u {
+  } */
+/* } */
 /* @media (max-width: 1200px) {
   .first-part-u {
     padding: calc(20px + (10 - 5) * ((100vw - 320px) / (1200 -320)));

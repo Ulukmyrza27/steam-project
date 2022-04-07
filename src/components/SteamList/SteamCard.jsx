@@ -14,6 +14,7 @@ import { cartContext } from "../../contexts/cartContext";
 import { favoritesContext } from "../../contexts/favoritesContext";
 import { contexts } from "../../contexts/context";
 import { FireplaceOutlined, ShoppingCartOutlined } from "@mui/icons-material";
+// import { FavoriteBorderIcon } from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const SteamCard = (item) => {
@@ -123,8 +124,6 @@ const SteamCard = (item) => {
               className="card-media-gun-u"
               component="img"
               alt="img"
-              height="200"
-              // width="200"
               image={item.image}
             />
             <CardContent className="card-content-u">
